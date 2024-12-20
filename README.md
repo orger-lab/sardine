@@ -18,7 +18,7 @@ providing dedicated data processing queues for each module. Any .NET class can b
 
 [Our ready-to-use components are available here.](components)
 
-/
+---
 
 A change log is available [here](CHANGELOG.md).
 
