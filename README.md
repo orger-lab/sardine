@@ -18,7 +18,10 @@ providing dedicated data processing queues for each module. Any .NET class can b
 
 [Our ready-to-use components are available here.](components)
 
+
+
 A change log is available [here](CHANGELOG.md).
+
 Submit crash reports/bugs/feature requests through [GitHub Issues](https://github.com/orger-lab/sardine/issues).
 
 ## Quick Start
