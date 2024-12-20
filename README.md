@@ -15,7 +15,9 @@ It includes integrated logging and UI management, has a low overhead, provides f
 providing dedicated data processing queues for each module. Any .NET class can be easily adapted to a Sardine module, facilitating integration with existing codebases.
 
 **Get Sardine through [NuGet](nugetLink)!**
+
 A change log is available [here](CHANGELOG.md).
+
 Submit crash reports/bugs/feature requests through [GitHub Issues](https://github.com/orger-lab/sardine/issues).
 
 ## Quick Start
