@@ -40,5 +40,7 @@ TODO: this
 
 ## Acknowledgments
 This work was developed at the Champalimaud Foundation in the Vision to Action laboratory, led by Dr. Michael Orger.
+
 We thank those who used software built with Sardine over the years, for helping to test the framework and providing critical feedback.
+
 Lucas Martins was supported by the PhD fellowships from the Portuguese Fundação para a Ciência e Tecnologia SFRH/BD/129843/2017 and COVID/BD/152726/2022.
