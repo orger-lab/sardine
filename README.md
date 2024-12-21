@@ -2,8 +2,11 @@
 <div align="center">
   
 <img src="logo.png" width="400">
-  
-[![NuGet](https://img.shields.io/nuget/v/Sardine.Core.svg)](https://www.nuget.org/packages/Sardine.Core/)
+
+| **Core** | **WPF Addons** |
+| -------- | -------------- |
+| [![NuGet Core](https://img.shields.io/nuget/v/Sardine.Core.svg)](https://www.nuget.org/packages/Sardine.Core/) | [![NuGet WPF](https://img.shields.io/nuget/v/Sardine.Core.Views.WPF.svg)](https://www.nuget.org/packages/Sardine.Core.Views.WPF/) |
+
 [![Version](https://img.shields.io/badge/Change%20Log-green)](CHANGELOG.md)
 </div>
 
@@ -14,7 +17,7 @@ Sardine allows the reliable execution of dynamic networks of independent modules
 It includes integrated logging and UI management, has a low overhead, provides fault-tolerant hardware control, and minimizes downstream delays by
 providing dedicated data processing queues for each module. Any .NET class can be easily adapted to a Sardine module, facilitating integration with existing codebases.
 
-**Get Sardine through [NuGet](nugetLink)!**
+**Get Sardine through [NuGet](https://www.nuget.org/packages/Sardine.Core/)!** The WPF addons to build desktop applications are available in the [WPF addons](https://www.nuget.org/packages/Sardine.Core.Views.WPF/) package.
 
 [Our ready-to-use components are available here.](https://github.com/orger-lab/sardine-components)
 
@@ -25,6 +28,8 @@ A change log is available [here](CHANGELOG.md).
 Submit crash reports/bugs/feature requests through [GitHub Issues](https://github.com/orger-lab/sardine/issues).
 
 ## Quick Start
+
+
 ### Building a Fleet and Freighting Vessels
 ```
 using Sardine.Core;
