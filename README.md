@@ -2,9 +2,8 @@
 <div align="center">
 ![Logo](logo.png)
   
-[![NuGet](badge)](link)
-[![Version](badge)](CHANGELOG.md)
-[![Wiki](badge)](link)
+[![NuGet](https://img.shields.io/nuget/v/Sardine.Core.svg)](https://www.nuget.org/packages/Sardine.Core/)
+[![Version](https://img.shields.io/badge/Change%20Log-green)](CHANGELOG.md)
 </div>
 
 Sardine is an open-source framework for developing and executing complex scientific workflows written in C# and built with .NET 8.
