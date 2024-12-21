@@ -1,6 +1,6 @@
 # Sardine
 <div align="center">
-![Logo](https://github.com/orger-lab/sardine/blob/main/logo.png)
+![Logo](logo.png)
   
 [![NuGet](badge)](link)
 [![Version](badge)](CHANGELOG.md)
