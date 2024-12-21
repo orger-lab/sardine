@@ -1,6 +1,7 @@
 # Sardine
 <div align="center">
-![Logo](logo.png)
+  
+<img src="logo.png" width="400">
   
 [![NuGet](https://img.shields.io/nuget/v/Sardine.Core.svg)](https://www.nuget.org/packages/Sardine.Core/)
 [![Version](https://img.shields.io/badge/Change%20Log-green)](CHANGELOG.md)
