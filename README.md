@@ -24,7 +24,76 @@ A change log is available [here](CHANGELOG.md).
 Submit crash reports/bugs/feature requests through [GitHub Issues](https://github.com/orger-lab/sardine/issues).
 
 ## Quick Start
-TODO: this
+### Building a Fleet and Freighting Vessels
+```
+using Sardine.Core;
+namespace ExampleApplication;
+
+// Create a new Fleet
+public class MySystem : Fleet
+{
+
+    // Declare Vessel properties that will serve as containers for the components
+    public Vessel<CameraService> CameraProvider { get; }
+    public Vessel<Camera> ImagingCamera { get; }
+    public Vessel<DataSaver> FrameSaver { get; }
+
+    public MySystem()
+    {
+
+        // Freight the Vessels by providing both dependencies
+        // and build, initializer, and invalidator methods
+        CameraProvider = Freighter.Freight<CameraService>(
+				builder: () => new CameraService()
+			     );
+
+        ImagingCamera = Freighter.Freight<Camera>(
+				CameraProvider,
+				builder: (provider) => ...,
+				initializer: (provider, camera) => ...,
+				invalidator: (provider, camera) => ... );
+
+        FrameSaver = Freighter.Freight<DataSaver>(() => ...);
+    }
+}
+
+```
+### Adding a data operation
+```
+// Write methods matching one of the data operation signatures
+public delegate TOut? Source<out TOut>(THandle handle, out bool hasMore);
+public delegate TOut? Transformer<in TIn, out TOut>(THandle handle, TIn data, MessageMetadata metadata);
+public delegate void Sink<in TIn>(THandle handle, TIn data, MessageMetadata metadata);
+
+// Add data operation to vessels in the Fleet constructor
+public MySystem()
+{
+...
+ImagingCamera.AddSource(CameraFrameSource);
+FrameSaver.AddSink(FrameSink);
+ImagingCamera.SourceRate = 100;
+...
+}
+```
+
+### Creating an application
+```
+--- XAML
+<src:SardineApplication            
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+x:TypeArguments="ExampleApplication:MySystem"
+x:Class="ExampleApplication.App"
+/>
+
+--- Code behind
+using Sardine.Core.Views.WPF;
+
+namespace ExampleApplication;
+
+// Have the entrypoint derive from SardineApplication
+public partial class App : SardineApplication<MySystem> { }
+```
 
 ## License
 Sardine is licensed under the [MIT License](LICENSE.md). If you are using software built with Sardine for your research, please cite our publication below.

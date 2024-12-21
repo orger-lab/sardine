@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A87D4DEA-1A73-492B-B3DB-E579B5C8D18A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{3C1CD1BC-F8EC-4C29-BB35-5C4E0BD60159}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sardine.Core", "src\Core\Sardine.Core\Sardine.Core.csproj", "{CDCD68C6-FAC8-4EE3-A941-9376D015251F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sardine.Core.Views.WPF", "src\Core\Views\WPF\Sardine.Core.Views.WPF\Sardine.Core.Views.WPF.csproj", "{ED9696A8-359A-4986-9910-E4C762DC5486}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{E923DD03-7D49-403C-9807-B8DD21B4F716}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{02FE6C12-9E90-40BE-AEFB-7F7C4E3CD570}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FictiveFishTracker", "samples\FictiveFishTracker\FictiveFishTracker.csproj", "{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDCD68C6-FAC8-4EE3-A941-9376D015251F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDCD68C6-FAC8-4EE3-A941-9376D015251F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDCD68C6-FAC8-4EE3-A941-9376D015251F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDCD68C6-FAC8-4EE3-A941-9376D015251F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9696A8-359A-4986-9910-E4C762DC5486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9696A8-359A-4986-9910-E4C762DC5486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9696A8-359A-4986-9910-E4C762DC5486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9696A8-359A-4986-9910-E4C762DC5486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C1CD1BC-F8EC-4C29-BB35-5C4E0BD60159} = {A87D4DEA-1A73-492B-B3DB-E579B5C8D18A}
+		{CDCD68C6-FAC8-4EE3-A941-9376D015251F} = {A87D4DEA-1A73-492B-B3DB-E579B5C8D18A}
+		{ED9696A8-359A-4986-9910-E4C762DC5486} = {E923DD03-7D49-403C-9807-B8DD21B4F716}
+		{E923DD03-7D49-403C-9807-B8DD21B4F716} = {3C1CD1BC-F8EC-4C29-BB35-5C4E0BD60159}
+		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4} = {02FE6C12-9E90-40BE-AEFB-7F7C4E3CD570}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19457D8C-D906-44B9-883C-85512D83A328}
+	EndGlobalSection
+EndGlobal

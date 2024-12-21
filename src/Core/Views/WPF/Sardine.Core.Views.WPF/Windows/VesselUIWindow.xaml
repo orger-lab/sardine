@@ -1,0 +1,38 @@
+﻿<Window x:Class="Sardine.Core.Views.WPF.VesselUIWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sardine.Core.Views.WPF"
+        mc:Ignorable="d"
+        Title="VesselUIWindow"                        
+        SizeToContent = "WidthAndHeight"
+        ResizeMode = "NoResize"
+        WindowStyle = "None"
+        ShowInTaskbar = "False"
+        d:DataContext="{d:DesignData IsDesignTimeCreatable=False, Type=local:VesselUIWindow}"
+        Loaded="Window_Loaded"
+        >
+    <Grid>
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem IsCheckable="True" Header="Lock Position" IsChecked="{Binding Path=Locked}" />
+            </ContextMenu>
+        </Grid.ContextMenu>
+        <Label MouseDown="Label_MouseDown" Content="X" FontStyle="Normal" FontWeight="ExtraBlack" Foreground="White" Background="Transparent" Panel.ZIndex="1" Margin="0,-2,2,0" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=Locked , UpdateSourceTrigger=PropertyChanged}" Value="True">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
+        <StackPanel>
+        <local:VesselUIContainer x:Name="UIContainer" Panel.ZIndex="0"/>
+        
+    </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,185 @@
+﻿<UserControl x:Class="Sardine.Core.Views.WPF.FleetManagerUI"
+             x:Name="controlBase"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Sardine.Core.Views.WPF"
+             xmlns:sardine="clr-namespace:Sardine.Core;assembly=Sardine.Core" xmlns:componentmodel="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance Type=local:FleetManagerUI, IsDesignTimeCreatable=False}"
+              Background="#222222" MinHeight="150" MinWidth="350">
+    <UserControl.Resources>
+        <local:VesselToUIAvailableConverter x:Key="VesselToUIAvailableConverter"/>
+        <CollectionViewSource x:Key="SortedVessels" Source="{Binding Source={x:Static sardine:Fleet.Current}, Path=VesselCollection, UpdateSourceTrigger=PropertyChanged}">
+            <CollectionViewSource.SortDescriptions>
+                <componentmodel:SortDescription PropertyName="DisplayName"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox ItemsSource="{Binding Source={StaticResource SortedVessels}}" 
+                 Width="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=Width}" 
+                 Grid.Row="1" Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 HorizontalAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel MouseLeftButtonDown="DockPanel_MouseLeftButtonDown" Tag="{Binding}" Background="Transparent">
+                        <DockPanel.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Open" Click="MenuItem_Open_Click"/>
+                                <MenuItem Header="Reload" Click="MenuItem_Reload_Click"/>
+                            </ContextMenu>
+                        </DockPanel.ContextMenu>
+                        <Ellipse  Height="20"  Stroke="White" Width="20" DockPanel.Dock="Left" HorizontalAlignment="Left" >
+                            <Ellipse.Style>
+                                <Style TargetType="Ellipse">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsReloading}" Value="True">
+                                            <Setter Property="Fill" Value="#FDBA01" />
+                                        </DataTrigger>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition  Binding="{Binding Path=IsAvailable}" Value="False"/>
+                                                <Condition  Binding="{Binding Path=IsReloading}" Value="False"/>
+                                            </MultiDataTrigger.Conditions>
+                                            <MultiDataTrigger.Setters>
+                                                <Setter Property="Fill" Value="#FFFF0808" />
+                                            </MultiDataTrigger.Setters>
+                                        </MultiDataTrigger>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition  Binding="{Binding Path=IsAvailable}" Value="True"/>
+                                                <Condition  Binding="{Binding Path=IsReloading}" Value="False"/>
+                                            </MultiDataTrigger.Conditions>
+                                            <MultiDataTrigger.Setters>
+                                                <Setter Property="Fill" Value="#FF1EFF08" />
+                                            </MultiDataTrigger.Setters>
+                                        </MultiDataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Ellipse.Style>
+                        </Ellipse>
+                        <Label Content="{Binding Path=DisplayName}" Width="140" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="10">
+                            <Label.Style>
+                                <Style TargetType="Label">
+                                    <Setter Property="Foreground" Value="DarkGray"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Value="True">
+                                            <DataTrigger.Binding>
+                                                <MultiBinding Converter="{StaticResource VesselToUIAvailableConverter}">
+                                                    <Binding />
+                                                </MultiBinding>
+                                            </DataTrigger.Binding>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Label.Style>
+                        </Label>
+                        <Button x:Name="Button_Reload" Tag="{Binding Path=Name}" Background="Bisque"  Click="Button_Reload_Click"  HorizontalAlignment="Right" DockPanel.Dock="Left" Width="55">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsReloading}" Value="False">
+                                            <Setter Property="Content" Value="Reload"/>
+                                            <Setter Property="IsEnabled" Value="True"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=IsReloading}" Value="True">
+                                            <Setter Property="Content" Value="Loading.."/>
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+
+                            </Button.Style>
+                        </Button>
+                        <Grid d:Background="Gray" Width="14" Height="20"  DockPanel.Dock="Left" >
+                            <Label Content="L" Foreground="AliceBlue" HorizontalAlignment="Center"   FontSize="9" VerticalAlignment="Center"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                            <Grid.Style>
+                                <Style TargetType="Grid">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsLinked}" Value="False">
+                                            <Setter Property="Background" Value="Gray"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=IsLinked}" Value="True">
+                                            <Setter Property="Background" Value="DarkOliveGreen"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
+                        </Grid>
+                        <Button x:Name="Button_Activate" Tag="{Binding Path=Name}" Click="Button_Activate_Click"  DockPanel.Dock="Left"  HorizontalAlignment="Right" Width="55">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsLinked}" Value="False">
+                                            <Setter Property="Visibility" Value="Hidden"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=IsActive}" Value="True">
+                                            <Setter Property="Content" Value="Stop"/>
+                                            <Setter Property="Background" Value="DarkSalmon"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=IsActive}" Value="False">
+                                            <Setter Property="Content" Value="Activate"/>
+                                            <Setter Property="Background" Value="SeaGreen"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+
+                        <Grid  DockPanel.Dock="Left" >
+                            <ProgressBar Width="60" Foreground="SeaGreen" Background="Gray"  Value="{Binding Path=QueueOccupation, Mode=OneWay}">
+                                <ProgressBar.Style>
+                                    <Style TargetType="ProgressBar">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=DataHandlingStrategy}" Value="ResolveImmediatly">
+                                                <Setter Property="Visibility" Value="Hidden"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ProgressBar.Style>
+
+                            </ProgressBar>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding StringFormat={}{0}%, Path=QueueOccupation, Mode=OneWay}">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=DataHandlingStrategy}" Value="ResolveImmediatly">
+                                                <Setter Property="Visibility" Value="Hidden"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                            <Grid.Style>
+                                <Style TargetType="Grid">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsLinked}" Value="True">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=IsLinked}" Value="False">
+                                            <Setter Property="Visibility" Value="Hidden"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
+                        </Grid>
+
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

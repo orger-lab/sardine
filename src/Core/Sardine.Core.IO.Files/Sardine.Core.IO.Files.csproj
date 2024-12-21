@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+	  <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+	  <AnalysisLevel>latest-all</AnalysisLevel>
+	  <CodeAnalysisRuleSet>..\..\RuleSet1.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sardine.Core\Sardine.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <AnalysisLevel>latest-all</AnalysisLevel>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Sardine</Title>
+    <Authors>ll_martins</Authors>
+    <Description>Sardine is an open-source framework for developing and executing complex scientific workflows.</Description>
+    <RepositoryUrl>https://github.com/orger-lab/sardine</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIcon>g128.png</PackageIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Copyright>Vision to Action lab, 2024</Copyright>
+    <PackageReadmeFile>readme_core_nupkg.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/orger-lab/sardine</PackageProjectUrl>
+    <Company>Vision to Action lab</Company>
+    <PackageTags>Sardine;</PackageTags>
+    <BaseOutputPath>E:\Documents\Bitbucket\orgerlab-c-library\sardine\artifacts</BaseOutputPath>
+    <SignAssembly>True</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\docs\.nupkg\g128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\..\docs\.nupkg\readme_core_nupkg.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
