@@ -1,10 +1,10 @@
 # Sardine
 <div align="center">
-TODO: logo
+[![Sardine Logo](logo.png)]
   
-TODO: nuget
-TODO: changelog
-TODO: wiki
+[![NuGet](badge)](link)
+[![Version](badge)](CHANGELOG.md)
+[![Wiki](badge)](link)
 </div>
 
 Sardine is an open-source framework for developing and executing complex scientific workflows written in C# and built with .NET 8.
@@ -28,7 +28,7 @@ Submit crash reports/bugs/feature requests through [GitHub Issues](https://githu
 TODO: this
 
 ## License
-Sardine is licensed under the [MIT License](LICENSE.md). If you are using a software built with Sardine for your research, please cite our publication as shown below.
+Sardine is licensed under the [MIT License](LICENSE.md). If you are using software built with Sardine for your research, please cite our publication below.
 
 ## Citation
 TODO: this
@@ -40,5 +40,5 @@ TODO: this
 
 ## Acknowledgments
 This work was developed at the Champalimaud Foundation in the Vision to Action laboratory, led by Dr. Michael Orger.
-We thank those who used software built with Sardine over the years, as all of you provided critical feedback.
+We thank those who used software built with Sardine over the years, for helping to test the framework and providing critical feedback.
 Lucas Martins was supported by the PhD fellowships from the Portuguese Fundação para a Ciência e Tecnologia SFRH/BD/129843/2017 and COVID/BD/152726/2022.
