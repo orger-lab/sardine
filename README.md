@@ -29,6 +29,12 @@ Submit crash reports/bugs/feature requests through [GitHub Issues](https://githu
 
 ## Quick Start
 
+Get the packages via NuGet, by using the package manager or from the CLI:
+```
+nuget install Sardine.Core
+nuget install Sardine.Core.Views.WPF
+```
+
 
 ### Building a Fleet and Freighting Vessels
 ```
