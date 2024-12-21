@@ -9,10 +9,42 @@
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     <AnalysisLevel>latest-all</AnalysisLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Sardine WPF Addons</Title>
+    <Authors>ll_martins</Authors>
+    <Company>Vision to Action lab</Company>
+    <Description>Sardine WPF addons for building desktop applications.</Description>
+    <Copyright>Vision to Action lab, 2024</Copyright>
+    <PackageProjectUrl>https://github.com/orger-lab/sardine</PackageProjectUrl>
+    <PackageIcon>g128.png</PackageIcon>
+    <PackageReadmeFile>readme_wpf_nupkg.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/orger-lab/sardine</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Sardine; WPF; desktop application</PackageTags>
+    <PackageOutputPath>..\..\packages\</PackageOutputPath>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <BaseOutputPath>E:\Documents\Bitbucket\orgerlab-c-library\sardine\artifacts</BaseOutputPath>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="sardine.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\.nupkg\g128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\docs\.nupkg\readme_wpf_nupkg.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -21,10 +53,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutomaticGraphLayout.WpfGraphControl" Version="1.1.12" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Sardine.Core\Sardine.Core.csproj" />
+    <PackageReference Include="Sardine.Core" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -21,20 +21,21 @@
     <PackageProjectUrl>https://github.com/orger-lab/sardine</PackageProjectUrl>
     <Company>Vision to Action lab</Company>
     <PackageTags>Sardine;</PackageTags>
+	<PackageOutputPath>..\..\packages\</PackageOutputPath>
     <BaseOutputPath>E:\Documents\Bitbucket\orgerlab-c-library\sardine\artifacts</BaseOutputPath>
-    <SignAssembly>True</SignAssembly>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\docs\.nupkg\g128.png">
+    <None Include="..\..\docs\.nupkg\g128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\..\..\LICENSE">
+    <None Include="..\..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\..\..\docs\.nupkg\readme_core_nupkg.md">
+    <None Include="..\..\docs\.nupkg\readme_core_nupkg.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
