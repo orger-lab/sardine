@@ -1,10 +1,10 @@
 # Sardine
 <div align="center">
-TODO: logo
+[![Sardine Logo](logo.png)]
   
-TODO: nuget
-TODO: changelog
-TODO: wiki
+[![NuGet](badge)](link)
+[![Version](badge)](CHANGELOG.md)
+[![Wiki](badge)](link)
 </div>
 
 Sardine is an open-source framework for developing and executing complex scientific workflows written in C# and built with .NET 8.
