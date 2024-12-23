@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{02FE6C12-9E90-40BE-AEFB-7F7C4E3CD570}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FictiveFishTracker", "samples\FictiveFishTracker\FictiveFishTracker.csproj", "{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sardine.Core", "src\Sardine.Core\Sardine.Core.csproj", "{8F8FB3B8-1CC5-47C2-A192-A784364B9AC6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sardine.Core.Views.WPF", "src\Sardine.Core.Views.WPF\Sardine.Core.Views.WPF.csproj", "{D7705F4A-FB0C-42DA-8E0D-1DBC61EF1312}"
@@ -17,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8F8FB3B8-1CC5-47C2-A192-A784364B9AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8F8FB3B8-1CC5-47C2-A192-A784364B9AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F8FB3B8-1CC5-47C2-A192-A784364B9AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,9 +24,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C2DBC692-FA7D-4303-A6F0-6DB8C7EA0AA4} = {02FE6C12-9E90-40BE-AEFB-7F7C4E3CD570}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19457D8C-D906-44B9-883C-85512D83A328}

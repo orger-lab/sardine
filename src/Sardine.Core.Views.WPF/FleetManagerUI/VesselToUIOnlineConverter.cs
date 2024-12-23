@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace Sardine.Core.Views.WPF
 {
-    public sealed class VesselToUIAvailableConverter : IMultiValueConverter
+    public sealed class VesselToUIOnlineConverter : IMultiValueConverter
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {

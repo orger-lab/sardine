@@ -10,7 +10,7 @@
              d:DataContext="{d:DesignInstance Type=local:FleetManagerUI, IsDesignTimeCreatable=False}"
               Background="#222222" MinHeight="150" MinWidth="350">
     <UserControl.Resources>
-        <local:VesselToUIAvailableConverter x:Key="VesselToUIAvailableConverter"/>
+        <local:VesselToUIOnlineConverter x:Key="VesselToUIOnlineConverter"/>
         <CollectionViewSource x:Key="SortedVessels" Source="{Binding Source={x:Static sardine:Fleet.Current}, Path=VesselCollection, UpdateSourceTrigger=PropertyChanged}">
             <CollectionViewSource.SortDescriptions>
                 <componentmodel:SortDescription PropertyName="DisplayName"/>
@@ -44,13 +44,13 @@
                             <Ellipse.Style>
                                 <Style TargetType="Ellipse">
                                     <Style.Triggers>
-                                        <DataTrigger Binding="{Binding Path=IsReloading}" Value="True">
+                                        <DataTrigger Binding="{Binding Path=IsLoading}" Value="True">
                                             <Setter Property="Fill" Value="#FDBA01" />
                                         </DataTrigger>
                                         <MultiDataTrigger>
                                             <MultiDataTrigger.Conditions>
-                                                <Condition  Binding="{Binding Path=IsAvailable}" Value="False"/>
-                                                <Condition  Binding="{Binding Path=IsReloading}" Value="False"/>
+                                                <Condition  Binding="{Binding Path=IsOnline}" Value="False"/>
+                                                <Condition  Binding="{Binding Path=IsLoading}" Value="False"/>
                                             </MultiDataTrigger.Conditions>
                                             <MultiDataTrigger.Setters>
                                                 <Setter Property="Fill" Value="#FFFF0808" />
@@ -58,8 +58,8 @@
                                         </MultiDataTrigger>
                                         <MultiDataTrigger>
                                             <MultiDataTrigger.Conditions>
-                                                <Condition  Binding="{Binding Path=IsAvailable}" Value="True"/>
-                                                <Condition  Binding="{Binding Path=IsReloading}" Value="False"/>
+                                                <Condition  Binding="{Binding Path=IsOnline}" Value="True"/>
+                                                <Condition  Binding="{Binding Path=IsLoading}" Value="False"/>
                                             </MultiDataTrigger.Conditions>
                                             <MultiDataTrigger.Setters>
                                                 <Setter Property="Fill" Value="#FF1EFF08" />
@@ -77,7 +77,7 @@
                                     <Style.Triggers>
                                         <DataTrigger Value="True">
                                             <DataTrigger.Binding>
-                                                <MultiBinding Converter="{StaticResource VesselToUIAvailableConverter}">
+                                                <MultiBinding Converter="{StaticResource VesselToUIOnlineConverter}">
                                                     <Binding />
                                                 </MultiBinding>
                                             </DataTrigger.Binding>
@@ -91,11 +91,11 @@
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Style.Triggers>
-                                        <DataTrigger Binding="{Binding Path=IsReloading}" Value="False">
+                                        <DataTrigger Binding="{Binding Path=IsLoading}" Value="False">
                                             <Setter Property="Content" Value="Reload"/>
                                             <Setter Property="IsEnabled" Value="True"/>
                                         </DataTrigger>
-                                        <DataTrigger Binding="{Binding Path=IsReloading}" Value="True">
+                                        <DataTrigger Binding="{Binding Path=IsLoading}" Value="True">
                                             <Setter Property="Content" Value="Loading.."/>
                                             <Setter Property="IsEnabled" Value="False"/>
                                         </DataTrigger>

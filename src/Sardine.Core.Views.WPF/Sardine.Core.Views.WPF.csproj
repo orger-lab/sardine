@@ -25,7 +25,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <BaseOutputPath>E:\Documents\Bitbucket\orgerlab-c-library\sardine\artifacts</BaseOutputPath>
-    <SignAssembly>False</SignAssembly>
+    <Version>1.1.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,11 +33,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\docs\.nupkg\g128.png">
+    <None Include="..\..\docs\.nuget\g128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\..\docs\.nupkg\readme_wpf_nupkg.md">
+    <None Include="..\..\docs\.nuget\readme_wpf_nupkg.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -53,7 +53,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutomaticGraphLayout.WpfGraphControl" Version="1.1.12" />
-    <PackageReference Include="Sardine.Core" Version="1.0.0" />
+    <PackageReference Include="Sardine.Core" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>

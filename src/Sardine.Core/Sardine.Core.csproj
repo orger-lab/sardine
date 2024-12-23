@@ -23,11 +23,13 @@
     <PackageTags>Sardine;</PackageTags>
 	<PackageOutputPath>..\..\packages\</PackageOutputPath>
     <BaseOutputPath>E:\Documents\Bitbucket\orgerlab-c-library\sardine\artifacts</BaseOutputPath>
-    <SignAssembly>False</SignAssembly>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\docs\.nupkg\g128.png">
+    <None Include="..\..\docs\.nuget\g128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -35,7 +37,7 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\..\docs\.nupkg\readme_core_nupkg.md">
+    <None Include="..\..\docs\.nuget\readme_core_nupkg.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

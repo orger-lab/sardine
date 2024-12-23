@@ -137,7 +137,7 @@ typeof(VesselUserControl<>), new FrameworkPropertyMetadata(new ObservableCollect
 
 
         public string Title => Vessel?.DisplayName ?? "";
-        public bool IsAvailable => Vessel?.IsOnline ?? false;
+        public bool IsOnline => Vessel?.IsOnline ?? false;
 
         public THandle? Handle
         {
