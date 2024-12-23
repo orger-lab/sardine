@@ -12,7 +12,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Added
 + Creation of a public repository to host Sardine.
 + Added the current usable version of Sardine code to the repository.
-+ Added an example program.
 
 [unreleased]: https://github.com/orger-lab/hybridsp-live/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/orger-lab/hybridsp-live/releases/tag/v1.0.0
