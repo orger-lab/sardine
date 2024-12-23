@@ -17,7 +17,7 @@ Sardine allows the reliable execution of dynamic networks of independent modules
 It includes integrated logging and UI management, has a low overhead, provides fault-tolerant hardware control, and minimizes downstream delays by
 providing dedicated data processing queues for each module. Any .NET class can be easily adapted to a Sardine module, facilitating integration with existing codebases.
 
-**Get Sardine through [NuGet](https://www.nuget.org/packages/Sardine.Core/)!** The WPF addons to build desktop applications are available in the [WPF addons](https://www.nuget.org/packages/Sardine.Core.Views.WPF/) package.
+**Get Sardine through [NuGet](https://www.nuget.org/packages/Sardine.Core/)!** The WPF add-ons to build desktop applications are available in the [WPF add-ons](https://www.nuget.org/packages/Sardine.Core.Views.WPF/) package.
 
 [Our ready-to-use components and examples are available here.](https://github.com/orger-lab/sardine-components)
 
