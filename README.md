@@ -39,7 +39,7 @@ nuget install Sardine.Core.Views.WPF
 ### Building a Fleet and Freighting Vessels
 ```
 using Sardine.Core;
-namespace ExampleFleet;
+namespace ExampleSystem;
 
 // Create a new Fleet
 public class MySystem : Fleet
@@ -95,7 +95,7 @@ ImagingCamera.SourceRate = 100;
 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
-xmlns:fleet="clr-namespace:ExampleFleet;assembly=ExampleFleet"
+xmlns:fleet="clr-namespace:ExampleSystem;assembly=ExampleSystem"
 x:TypeArguments="fleet:MySystem"
 x:Class="ExampleApplication.App"
 />
