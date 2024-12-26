@@ -55,17 +55,17 @@ public class MySystem : Fleet
 
         // Freight the Vessels by providing both dependencies
         // and build, initializer, and invalidator methods
-        CameraProvider = Freighter.Freight<CameraService>(
+        CameraProvider = Freighter.Freight(
 				builder: () => new CameraService()
 			     );
 
-        ImagingCamera = Freighter.Freight<Camera>(
+        ImagingCamera = Freighter.Freight(
 				CameraProvider,
 				builder: (provider) => ...,
 				initializer: (provider, camera) => ...,
 				invalidator: (provider, camera) => ... );
 
-        FrameSaver = Freighter.Freight<DataSaver>(() => ...);
+        FrameSaver = Freighter.Freight(() => ...);
     }
 }
 
