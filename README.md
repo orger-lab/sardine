@@ -19,7 +19,7 @@ providing dedicated data processing queues for each module. Any .NET class can b
 
 **Get Sardine through [NuGet](https://www.nuget.org/packages/Sardine.Core/)!** The WPF add-ons to build desktop applications are available in the [WPF add-ons](https://www.nuget.org/packages/Sardine.Core.Views.WPF/) package.
 
-[Our ready-to-use components and examples are available here.](https://github.com/orger-lab/sardine-components)
+[Our component collection and examples are available here.](https://github.com/orger-lab/sardine-components)
 
 ---
 
