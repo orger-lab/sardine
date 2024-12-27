@@ -92,12 +92,12 @@ ImagingCamera.SourceRate = 100;
 ```
 --- XAML
 <sardine:SardineApplication            
-xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
-xmlns:fleet="clr-namespace:ExampleSystem;assembly=ExampleSystem"
-x:TypeArguments="fleet:MySystem"
-x:Class="ExampleApplication.App"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
+	xmlns:fleet="clr-namespace:ExampleSystem;assembly=ExampleSystem"
+	x:TypeArguments="fleet:MySystem"
+	x:Class="ExampleApplication.App"
 />
 
 --- Code behind
