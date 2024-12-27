@@ -11,6 +11,8 @@
         >
     <Grid>
         <DockPanel x:Name="DockPanel_GraphViewer"/>
-        <Button x:Name="Button_SaveImage" Content="Save image as .." Click="Button_SaveImage_Click" Width="80" Height="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,5,5,5"/>
+        <!--
+            <Button x:Name="Button_SaveImage" Content="Save image as .." Click="Button_SaveImage_Click" Width="80" Height="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,5,5,5"/>
+        -->
     </Grid>
 </Window>

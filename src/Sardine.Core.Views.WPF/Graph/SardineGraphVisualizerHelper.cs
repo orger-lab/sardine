@@ -10,7 +10,7 @@ namespace Sardine.Core.Views.Graph.WPF
         public IReadOnlyList<UIHelper> Actions { get; } =
         [
             new UIHelper("Show", () => new SardineGraphVisualizer(Fleet.Current.DependencyGraph).ShowDialog()),
-                    new UIHelper("Save as..", () => SardineGraphVisualizer.SaveImageAs(Fleet.Current.DependencyGraph)),
+            //        new UIHelper("Save as..", () => SardineGraphVisualizer.SaveImageAs(Fleet.Current.DependencyGraph)),
         ];
     }
 }

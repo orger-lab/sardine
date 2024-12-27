@@ -22,7 +22,7 @@
     <Company>Vision to Action lab</Company>
     <PackageTags>Sardine;</PackageTags>
 	<PackageOutputPath>..\..\packages\</PackageOutputPath>
-    <BaseOutputPath>E:\Documents\Bitbucket\orgerlab-c-library\sardine\artifacts</BaseOutputPath>
+    <BaseOutputPath>..\..\artifacts\</BaseOutputPath>
     <AssemblyVersion>1.1.0</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>1.1.0</Version>

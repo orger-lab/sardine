@@ -24,8 +24,8 @@
     <PackageOutputPath>..\..\packages\</PackageOutputPath>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <BaseOutputPath>E:\Documents\Bitbucket\orgerlab-c-library\sardine\artifacts</BaseOutputPath>
-    <Version>1.1.2</Version>
+    <BaseOutputPath>..\..\artifacts\</BaseOutputPath>
+    <Version>1.1.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
