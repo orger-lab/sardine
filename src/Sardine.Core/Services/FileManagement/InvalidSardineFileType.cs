@@ -2,6 +2,6 @@
 {
     public sealed class InvalidSardineFileType : FileType
     {
-        internal InvalidSardineFileType() : base(Array.Empty<string>(), "Invalid File") { }
+        internal InvalidSardineFileType() : base(string.Empty, "Invalid File") { }
     }
 }

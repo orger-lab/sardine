@@ -2,14 +2,10 @@
 {
     public abstract class FileType
     {
-        public IReadOnlyList<string> Extension { get; }
+        public string Extension { get; }
         public string Description { get; }
         public static InvalidSardineFileType InvalidFileType { get; } = new();
-
-
-        protected FileType(string extension, string description) : this(new string[1] { extension }, description) { }
-
-        protected FileType(string[] extension, string description)
+        protected FileType(string extension, string description)
         {
             Extension = extension;
             Description = description;

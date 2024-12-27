@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Globalization;
 using Sardine.Core.FileManagement;
 using Sardine.Core.Utils.Reflection;
+using Microsoft.Win32;
 
 namespace Sardine.Core.Views.WPF.LayoutManagement
 {
@@ -72,7 +73,20 @@ namespace Sardine.Core.Views.WPF.LayoutManagement
             if (managerUI is null)
                 return;
 
-            string? filename = SaveSardineFileDialog.GetPath("SARDINE Layout", FileType.OfType<VesselUILayoutFileType>());
+            FileType fileType = FileType.OfType<VesselUILayoutFileType>();
+
+            SaveFileDialog dialog = new SaveFileDialog()
+            {
+                InitialDirectory = SardineInfo.BaseLocation,
+                AddExtension = true,
+                Filter = $"{fileType.Description} (*{fileType.Extension})|*{fileType.Extension}",
+                DefaultExt = fileType.Extension,
+            };
+            
+            if (!(dialog.ShowDialog() ?? false))
+                return;
+
+            string? filename = dialog.FileName;
 
             if (filename is null)
                 return;

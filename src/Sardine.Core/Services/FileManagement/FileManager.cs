@@ -15,10 +15,7 @@ namespace Sardine.Core.FileManagement
             if (fileType is null)
                 return;
 
-            if (!(fileType.Extension.Contains(Path.GetExtension(name)) || fileType.Extension.Count == 0))
-                name = Path.ChangeExtension(name, fileType.Extension[0]);
-
-            System.IO.File.WriteAllBytes(Path.Combine(location ?? SardineInfo.BaseLocation, name), fileData);
+            File.WriteAllBytes(name, fileData);
         }
 
         public static FileType GetFileType(string? fileLocation)
@@ -28,8 +25,6 @@ namespace Sardine.Core.FileManagement
 
             foreach (FileType fileType in KnownSardineFileTypes.Values)
             {
-                if (fileType.Extension.Contains(Path.GetExtension(fileLocation)) || fileType.Extension.Count == 0)
-                {
                     using (FileStream stream = File.OpenRead(fileLocation))
                     {
 #pragma warning disable CA1031 // Do not catch general exception types
@@ -42,7 +37,6 @@ namespace Sardine.Core.FileManagement
 #pragma warning restore CA1031 // Do not catch general exception types
 
                     }
-                }
             }
 
             return FileType.InvalidFileType;
