@@ -23,9 +23,7 @@
     <PackageTags>Sardine;</PackageTags>
 	<PackageOutputPath>..\..\packages\</PackageOutputPath>
     <BaseOutputPath>..\..\artifacts\</BaseOutputPath>
-    <AssemblyVersion>1.1.0</AssemblyVersion>
-    <FileVersion>$(AssemblyVersion)</FileVersion>
-    <Version>1.1.5</Version>
+    <Version>1.1.8</Version>
   </PropertyGroup>
 
   <ItemGroup>

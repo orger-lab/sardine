@@ -44,7 +44,7 @@ namespace Sardine.Core.Views.WPF
 
         public static object SardineWindowBackground
         {
-            get => Fleet.Current.SettingsProvider.FetchSetting("Application", "Window", "Bakground")?.Value ?? "#222222";
+            get => Fleet.Current.SettingsProvider.FetchSetting("Application", "Window", "Background")?.Value ?? "#222222";
         }
     }
 }

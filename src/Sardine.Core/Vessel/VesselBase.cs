@@ -159,7 +159,7 @@ namespace Sardine.Core
                 if (isActive == value)
                     return;
 
-                if (!IsLinked && value == true)
+                if (!IsLinked)
                     return;
 
                 isActive = value;

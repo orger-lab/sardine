@@ -63,8 +63,7 @@ namespace Sardine.Core
 
             foreach (Vessel dependency in DependencyList)
             {
-                if (!dependency.IsOnline)
-                    dependency.Reload();
+                dependency.Reload();
             }
 
             if (AreDependenciesAvailable())
@@ -72,10 +71,13 @@ namespace Sardine.Core
                 IList<object> dObjs = GetDependencyObjects();
 
                 Handle = ExecuteBuilder(dObjs);
-                ExeciteInitializer(dObjs);
+                ExecuteInitializer(dObjs);
             }
 
             OnReload(this);
+
+
+
         }
 
         public override void Invalidate()
@@ -137,7 +139,7 @@ namespace Sardine.Core
             return default;
         }
 
-        private void ExeciteInitializer(IList<object> dObjs)
+        private void ExecuteInitializer(IList<object> dObjs)
         {
             if (Handle is null || initializer is null)
                 return;
