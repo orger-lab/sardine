@@ -121,8 +121,7 @@ TODO: this
 - **Organization**: Champalimaud Foundation
 
 ## Acknowledgments
-This work was developed at the Champalimaud Foundation in the Vision to Action laboratory, led by Dr. Michael Orger.
+This work is financed by national funds through the FCT - Foundation for Science and Technology, I.P., under the project 2023.14873.PEX.
+All authors were supported by the Champalimaud Foundation.
+ALM was funded by the Portuguese Fundação para a Ciência e Tecnologia through the PhD fellowships SFRH/BD/129843/2017 and COVID/BD/152726/2022 and MO secured funding through an ERC Consolidator Grant (Neurofish-DLV-773012), FCT (2023.14873.PEX) and Champalimaud Foundation. MO and AL received support from the Volkswagen Stiftung Life? Initiative (A126151).
 
-We thank those who used software built with Sardine over the years, for helping to test the framework and providing critical feedback.
-
-Lucas Martins was supported by the PhD fellowships from the Portuguese Fundação para a Ciência e Tecnologia SFRH/BD/129843/2017 and COVID/BD/152726/2022.
