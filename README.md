@@ -113,7 +113,8 @@ public partial class App : SardineApplication<MySystem> { }
 Sardine is licensed under the [MIT License](LICENSE.md). If you are using software built with Sardine for your research, please cite our publication below.
 
 ## Citation
-TODO: this
+Martins, A. L., Laborde, A., & Orger, M. (2025). Sardine: a modular framework for developing data acquisition and near real-time analysis applications. bioRxiv, 2025-08.
+doi: https://doi.org/10.1101/2025.08.05.668834
 
 ## Contact
 - **Point of contact**: Lucas Martins
