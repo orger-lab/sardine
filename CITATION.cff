@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you are using software built with Sardine for your research, please cite our publication as below."
+authors:
+- family-names: "Martins"
+  given-names: "A. Lucas"
+  orcid: "https://orcid.org/0000-0002-7325-2466"
+- family-names: "Laborde"
+  given-names: "Alexandre"
+- family-names: "Orger"
+  given-names: "Michael B."
+  orcid: "https://orcid.org/0000-0002-9763-8902"
+title: "Sardine: A modular framework for developing data acquisition and near real-time analysis applications"
+version: 1.0.0
+doi: 10.1371/journal.pone.0330591
+date-released: 2025-07-14
+url: "https://github.com/orger-lab/sardine"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Martins"
+    given-names: "A. Lucas"
+    orcid: "https://orcid.org/0000-0002-7325-2466"
+  - family-names: "Laborde"
+    given-names: "Alexandre"
+  - family-names: "Orger"
+    given-names: "Michael B."
+    orcid: "https://orcid.org/0000-0002-9763-8902"
+  doi: "10.1371/journal.pone.0330591"
+  journal: "PLOS One"
+  month: 2
+  title: "Sardine: A modular framework for developing data acquisition and near real-time analysis applications"
+  issue: 2
+  volume: 21
+  year: 2026
